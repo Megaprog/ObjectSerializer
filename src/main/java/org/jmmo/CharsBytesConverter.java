@@ -1,5 +1,7 @@
 package org.jmmo;
 
+import java.util.function.Function;
+
 public class CharsBytesConverter {
     private CharsBytesConverter() {}
 
@@ -25,4 +27,8 @@ public class CharsBytesConverter {
 
         return bytes;
     }
+
+    public static final Function<byte[], char[]> BYTES_TO_CHARS = CharsBytesConverter::toChars;
+
+    public static final Function<char[], byte[]> CHARS_TO_BYTES = CharsBytesConverter::toBytes;
 }

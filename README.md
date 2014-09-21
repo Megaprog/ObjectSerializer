@@ -1,4 +1,4 @@
 ObjectSerializer
 ================
 
-For easy serialize/deserialize Java object to/from byte array or String
+For easy serialize/deserialize Java objects to/from byte array or String
