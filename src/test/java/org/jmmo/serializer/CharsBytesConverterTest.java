@@ -1,5 +1,6 @@
-package org.jmmo;
+package org.jmmo.serializer;
 
+import org.jmmo.serializer.CharsBytesConverter;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;

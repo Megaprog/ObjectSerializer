@@ -1,4 +1,4 @@
-package org.jmmo;
+package org.jmmo.serializer;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
