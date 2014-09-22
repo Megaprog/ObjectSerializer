@@ -1,6 +1,5 @@
 package org.jmmo.serializer;
 
-import org.jmmo.serializer.CharsBytesConverter;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -23,8 +22,16 @@ public class CharsBytesConverterTest {
     public void testToChars() throws Exception {
         final byte[] bytes = {0, 1, 127, -128, -1, 60};
         final char[] chars = CharsBytesConverter.toChars(bytes);
-        final String storage = new String(chars);
-        final byte[] convertedBytes = CharsBytesConverter.toBytes(storage.toCharArray());
+        final byte[] convertedBytes = CharsBytesConverter.toBytes(chars);
+
+        assertArrayEquals(bytes, convertedBytes);
+    }
+
+    @Test
+    public void testToFromString() throws Exception {
+        final byte[] bytes = {0, 1, 127, -128, -1, 60};
+        final String string = CharsBytesConverter.toString(bytes);
+        final byte[] convertedBytes = CharsBytesConverter.fromString(string);
 
         assertArrayEquals(bytes, convertedBytes);
     }

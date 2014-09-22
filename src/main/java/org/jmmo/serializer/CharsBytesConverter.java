@@ -28,7 +28,17 @@ public class CharsBytesConverter {
         return bytes;
     }
 
+    public static String toString(byte[] bytes) {
+        return new String(toChars(bytes));
+    }
+
+    public static byte[] fromString(String string) {
+        return toBytes(string.toCharArray());
+    }
+
     public static final Function<byte[], char[]> BYTES_TO_CHARS = CharsBytesConverter::toChars;
+    public static final Function<byte[], String> BYTES_TO_STRING = CharsBytesConverter::toString;
 
     public static final Function<char[], byte[]> CHARS_TO_BYTES = CharsBytesConverter::toBytes;
+    public static final Function<String, byte[]> STRING_TO_BYTES = CharsBytesConverter::fromString;
 }
