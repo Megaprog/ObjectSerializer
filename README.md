@@ -32,10 +32,10 @@ Optional<SomeClass> someObjectOpt = ObjectSerializer.deserialize(SomeClass.class
 
 Pack bytes array from String
 ```java
-String string = CharsBytesConverter.toString(bytes));
+String string = CharsBytesConverter.toString(bytes);
 ```
 
 Unpack bytes array from String
 ```java
-byte[] bytes = CharsBytesConverter.fromString(string));
+byte[] bytes = CharsBytesConverter.fromString(string);
 ```
