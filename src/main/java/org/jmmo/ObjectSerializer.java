@@ -41,7 +41,7 @@ public class ObjectSerializer {
         }
     }
 
-    public static Object deserialize(byte[] bytes) {
+    public static Optional<Object> deserialize(byte[] bytes) {
         return deserialize(bytes, EMPTY_EXCEPTION_CONSUMER);
     }
 

@@ -22,7 +22,8 @@ public class CharsBytesConverterTest {
     public void testToChars() throws Exception {
         final byte[] bytes = {0, 1, 127, -128, -1, 60};
         final char[] chars = CharsBytesConverter.toChars(bytes);
-        final byte[] convertedBytes = CharsBytesConverter.toBytes(chars);
+        final String storage = new String(chars);
+        final byte[] convertedBytes = CharsBytesConverter.toBytes(storage.toCharArray());
 
         assertArrayEquals(bytes, convertedBytes);
     }
