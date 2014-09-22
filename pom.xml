@@ -24,7 +24,7 @@
     <scm>
         <url>https://github.com/Megaprog/ObjectSerializer</url>
         <connection>scm:git:https://github.com/Megaprog/ObjectSerializer.git</connection>
-        <tag>ring-list-1.0</tag>
+        <tag>object-serializer-1.0</tag>
     </scm>
 
     <developers>
